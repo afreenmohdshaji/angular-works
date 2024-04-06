@@ -1,0 +1,26 @@
+
+
+<div class="container">
+    <div class=" d-flex justify-content-center gap-4">
+        <div class="border border-2 p-3 alert alert-success">
+            <h3 class="fw-bold">TotalIncome:{{totalIncome}}</h3>
+        </div>
+        <div class="border border-2 p-3 alert alert-danger">
+            <h3 class="fw-bold">TotalExpense:{{totalExpense}}</h3>
+        </div>
+    </div>
+    <div class="d-flex justify-content-evenly my-3">
+        <div *ngFor="let cat of summary" class="alert alert-dark p-3">
+            {{cat.category}}:{{cat.total}}
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-4">
+            <canvas id="mychart"></canvas>
+        </div>
+        <div class="col-4"></div>
+    </div>
+</div>
+
+

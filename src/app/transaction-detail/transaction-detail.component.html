@@ -1,0 +1,17 @@
+<div class="container d-flex justify-content-center mt-5 ">
+    <div class="row">
+        <div class="col-3">
+            <div class="card shadow" style="width: 18rem;">
+                <div class="card-header ">
+                  {{transactionDetail.title|uppercase}}
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">{{transactionDetail.amount|currency:'INR'}}</li>
+                  <li class="list-group-item">{{transactionDetail.type}}</li>
+                  <li class="list-group-item">{{transactionDetail.category}}</li>
+                  <li class="list-group-item">{{transactionDetail.created_date|date}}</li>
+                </ul>
+              </div>
+        </div>
+    </div>
+</div>

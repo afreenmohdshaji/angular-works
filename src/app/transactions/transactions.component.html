@@ -1,0 +1,19 @@
+<div class="conatiner  p-4 ">
+    
+    <div *ngFor="let t of transaction" class="border border-black rounded-pill py-3 d-flex gap-4 p-4 mb-3 bg-info">
+            <div >
+                {{t.title}}   
+            </div>
+            <div>
+                {{t.category}}
+            </div>
+            <div>
+                {{t.amount}}
+            </div>
+            <div class="d-flex ms-auto gap-5">
+                <a href="" [routerLink]="['transaction/',t.id]" class="mt-2"><i class="fa-solid fa-eye"></i></a>
+                <button (click)="editTransaction(t.id)" class="btn"><i class="fa-solid fa-pen-to-square"></i></button>
+                <button (click)="destroyTransaction(t.id)" class="btn"><i class="fa-solid fa-trash" style="color: #ff1313;"></i></button>
+            </div>
+    </div>
+</div>
